@@ -49,18 +49,12 @@ function App() {
 
   return (
     <main className="w-full h-full bg-black flex justify-center items-center">
-      <div>
-        <h1 className="text-white text-7xl">Doom Fire Algorithm</h1>
-        <div className="flex gap-4">
-          <canvas
-            ref={canvasRef}
-            className="w-[400px] h-[400px] border"
-          ></canvas>
+      <div className="max-w-[400px]">
+        <h1 className="text-white text-center text-6xl">Doom Fire Algorithm</h1>
+        <div className="md:flex gap-4">
+          <canvas ref={canvasRef} className="w-full  h-[400px] border"></canvas>
           <input
-            style={{
-              WebkitAppearance: "slider-vertical",
-            }}
-            className="w-[10px]"
+            className="w-full md:w-[20px] slim-input"
             type="range"
             min="0"
             max="6"
@@ -71,7 +65,7 @@ function App() {
             }
           />
         </div>
-        <div className="mt-4 rounded gap-[8px] grid grid-cols-4">
+        <div className="mt-4 rounded gap-[8px] grid grid-auto">
           <button
             className="border border-white text-white rounded"
             onClick={() => control.createFireSource()}

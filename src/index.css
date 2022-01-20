@@ -4,14 +4,20 @@
 
 @layer components {
 
+  @media(min-width: 768px){
+
 .slim-input{
-  background: black;
+  appearance: slider-vertical;
+}
+  }
+.grid-auto{
+grid-template-columns:  repeat( auto-fit, minmax(50px, 1fr) );
 }
 }
 
 @font-face {
   font-family: doom;
-  src: url(./assets/AmazDooMRightOutline.ttf)
+  src: url(./assets/AmazDooMLeft2.ttf)
 }
 
 html, body, #root {
